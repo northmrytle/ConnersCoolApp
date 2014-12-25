@@ -25,6 +25,7 @@ function btnMenu_onclick(m){
 
 
 function loadCard(){
+    document.getElementById("flashcardAnswer").focus();
     a = Math.floor((Math.random() * 26) + 1);
     a = String.fromCharCode(96 + a);
     document.getElementById('flashcardImg').src = 'img/' + a + '.png'
@@ -33,13 +34,15 @@ function loadCard(){
 function checkAnswer(){
     a = a.toUpperCase();
     answer = answer.toUpperCase();
-    alert (a + ';' + answer );
+//    alert (a + ';' + answer );
     
     if (a == answer){
         showCorrect();
         loadCard();
     }
     else{
+        document.getElementById('flashcardAnswer').value = '';
+        document.getElementById("flashcardAnswer").focus();
         showIncorrect();
     }
 }
