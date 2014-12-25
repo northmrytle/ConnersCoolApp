@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>conners cool sign langauge App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="cca.css"/>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div id='app'>
+        
+            <div id='menu'>
+                Welcome to Conner's Cool sign langauge App<br/>
+                <input type='button' class='menuButton' id='btnFlashCards' value='Flash Cards' onclick='btnFlashcards_onclick()'/><br/>
+                <input type='button' class='menuButton' id='btnPractice' value='Practice' onclick='btnPractice_onclick()'/><br/>
+                <input type="button" class='menuButton' id="button1" value="Press Me!" onclick='alert("help me i am trapped inside an iPhone!");'/><br/>
+            </div>
+            
+            <div id='flashcards'>
+                Flashcards<br/>
+                <img id='flashcardImg' src=''/><br/>
+                <input type='text' id='flashcardAnswer' ><br/>
+                <input type='button' class='menuButton' value='OK' onclick='btnOK_onclick()' /><br/>
+                <input type='button' class='menuButton' value='Menu' onclick="btnMenu_onclick('flashcards')"><br/>
+            </div>
+            
+            <div id='practice'>
+                Practice<br/>
+                <img id='imgPractice' src='img/cms-Sign-Language.png' style='width:100%'/><br/>
+                <input type='button' class='menuButton' value='Menu' onclick="btnMenu_onclick('practice')"><br/>
+            </div>
+            
+            <div id="correct" >
+                <img src="img/ThumbsUp.png"/><br/>
+                <span id="correctText">
+                    Correct!
+                </span>
+            </div>
+        
+            <div id="incorrect" >
+                <img src="img/ThumbsDown.png"/><br/>
+                <span id="incorrectText">
+                    Nice Try!
+                </span>           
+            </div>  
+        </div>
+        
+    </body>
+</html>
