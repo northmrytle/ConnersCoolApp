@@ -14,8 +14,7 @@ function btnFlashcards_onclick(){
 
 function btnPractice_onclick(){
     document.getElementById('menu').style.display='none';
-    document.getElementById('practice').style.display='block';
-    
+    document.getElementById('practice').style.display='block'; 
 }
 
 function btnMenu_onclick(m){
@@ -34,15 +33,12 @@ function loadCard(){
 function checkAnswer(){
     a = a.toUpperCase();
     answer = answer.toUpperCase();
-//    alert (a + ';' + answer );
-    
+    document.getElementById('flashcardAnswer').value = '';
     if (a == answer){
         showCorrect();
         loadCard();
     }
     else{
-        document.getElementById('flashcardAnswer').value = '';
-        document.getElementById("flashcardAnswer").focus();
         showIncorrect();
     }
 }
@@ -60,15 +56,28 @@ function showCorrect(){
 function hideCorrect(){
     document.getElementById('correct').style.display='none';
     document.getElementById('flashcards').style.display='block';
+    document.getElementById("flashcardAnswer").focus(); 
 }
 
 function showIncorrect(){
     document.getElementById('incorrect').style.display = 'block';
-    myVar=setTimeout(function(){hideIncorrect()},2000);
-  
+    myVar=setTimeout(function(){hideIncorrect()},2000); 
 }
 
 function hideIncorrect(){
     document.getElementById('incorrect').style.display='none';
     document.getElementById('flashcards').style.display='block';
+    document.getElementById("flashcardAnswer").focus();
+}
+
+function msgBox(message){
+    document.getElementById('msgBox').style.display = 'block';
+    document.getElementById('msgBoxShadow').style.display = 'block';
+    document.getElementById('msgBoxText').innerHTML = message; 
+}
+
+function msgBoxOK_onclick(){
+    document.getElementById('msgBox').style.display = 'none';
+    document.getElementById('msgBoxShadow').style.display = 'none';
+    document.getElementById('msgBoxText').innerHTML = ''; 
 }

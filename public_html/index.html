@@ -17,13 +17,13 @@ and open the template in the editor.
         
             <div id='menu'>
                 Welcome to Conner's Cool sign langauge App<br/>
+                <br/>
                 <input type='button' class='menuButton' id='btnFlashCards' value='Flash Cards' onclick='btnFlashcards_onclick()'/><br/>
                 <input type='button' class='menuButton' id='btnPractice' value='Practice' onclick='btnPractice_onclick()'/><br/>
-                <input type="button" class='menuButton' id="button1" value="Press Me!" onclick='alert("help me i am trapped inside an iPhone!");'/><br/>
+                <input type="button" class='menuButton' id="button1" value="Press Me!" onclick='msgBox("help me i am trapped inside this device!");'/><br/>
             </div>
             
             <div id='flashcards'>
-                
                 Flashcards<br/>
                 <img id='flashcardImg' src=''/><br/>
                 <input type='text' id='flashcardAnswer' size='5'><br/>
@@ -38,18 +38,28 @@ and open the template in the editor.
             </div>
             
             <div id="correct" >
-                <img src="img/ThumbsUp.png"/><br/>
+                <img id="imgCorrect" src="img/ThumbsUp.png"/><br/>
                 <span id="correctText">
                     Correct!
                 </span>
             </div>
         
             <div id="incorrect" >
-                <img src="img/ThumbsDown.png"/><br/>
+                <img id="imgIncorrect" src="img/ThumbsDown.png"/><br/>
                 <span id="incorrectText">
                     Nice Try!
                 </span>           
-            </div>  
+            </div> 
+            
+            <div id='msgBox' >
+                <span id='msgBoxText'></span><br/>
+                <input type="button" id='msgBoxOK' class='menuButton' value="OK" onclick="msgBoxOK_onclick();"/><br/>
+            </div>
+            
+            <div id='msgBoxShadow'>
+                
+            </div>
+            
         </div>
         
     </body>
