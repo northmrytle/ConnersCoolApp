@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "net.northmyrtle.cca"
         version   = "0.0.4">
-    <name>FMS</name>
+    <name>CCA</name>
  
     <description>
         Conners Cool App
